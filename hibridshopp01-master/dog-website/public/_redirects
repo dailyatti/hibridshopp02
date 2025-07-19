@@ -1,1 +1,21 @@
-/*    /index.html   200 
+# Netlify redirects for SPA routing
+/*    /index.html   200
+
+# Admin panel redirects
+/admin    /index.html   200
+/admin/*  /index.html   200
+
+# API redirects (if needed)
+/api/*    https://your-backend-api.com/:splat    200
+
+# Security headers
+/security.txt  /security.txt  200
+
+# Sitemap
+/sitemap.xml  /sitemap.xml  200
+
+# Robots
+/robots.txt  /robots.txt  200
+
+# Legacy redirects (if any)
+/old-page  /new-page  301 

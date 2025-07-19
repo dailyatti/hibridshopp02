@@ -1,13 +1,21 @@
 {
-  "name": "dog-website",
+  "name": "hibrid-shopp-website",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Hibrid Shopp - Prémium hibrid kutyafajták weboldala professzionális admin panellel",
+  "author": "Hibrid Shopp",
+  "license": "MIT",
   "scripts": {
     "dev": "vite",
-    "build": "npx vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "build": "vite build",
+    "build:analyze": "vite build --mode analyze",
+    "preview": "vite preview",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "lint:fix": "eslint . --ext js,jsx --fix",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.0.1",
@@ -71,5 +79,21 @@
     "globals": "^16.0.0",
     "tw-animate-css": "^1.2.9",
     "vite": "^6.3.5"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
